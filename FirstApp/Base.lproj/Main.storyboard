@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +12,69 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FirstApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jesse Pinkman" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jUo-pW-skw">
+                                <rect key="frame" x="130" y="397" width="115" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="9n9-Ad-FFq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.23976399287358641" blue="0.91200992090027733" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Walter White" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c02-hY-ta9">
+                                <rect key="frame" x="138" y="355" width="99" height="21"/>
+                                <color key="backgroundColor" red="0.21178294912064732" green="0.25440529492751651" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="lVJ-Kl-g5b"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="breaking_bad.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="BIN-0F-ymR">
+                                <rect key="frame" x="67" y="110" width="241" height="164"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKI-b3-WH8">
+                                <rect key="frame" x="160" y="474" width="54" height="30"/>
+                                <state key="normal" title="Değiştir"/>
+                                <connections>
+                                    <action selector="btnDegistirAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QGf-zF-BpT"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="BIN-0F-ymR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="0dy-Bd-AtK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jUo-pW-skw" secondAttribute="bottom" constant="249" id="JRm-ti-xfs"/>
+                            <constraint firstItem="BIN-0F-ymR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MxT-38-I60"/>
+                            <constraint firstItem="sKI-b3-WH8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="160" id="T3Q-YI-XFF"/>
+                            <constraint firstItem="c02-hY-ta9" firstAttribute="centerX" secondItem="jUo-pW-skw" secondAttribute="centerX" id="U2U-Uk-U5A"/>
+                            <constraint firstItem="sKI-b3-WH8" firstAttribute="centerX" secondItem="jUo-pW-skw" secondAttribute="centerX" id="XfR-wq-ofP"/>
+                            <constraint firstItem="BIN-0F-ymR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="90" id="cvO-aI-A54"/>
+                            <constraint firstItem="sKI-b3-WH8" firstAttribute="top" secondItem="jUo-pW-skw" secondAttribute="bottom" constant="56" id="dzI-pd-52o"/>
+                            <constraint firstItem="jUo-pW-skw" firstAttribute="top" secondItem="c02-hY-ta9" secondAttribute="bottom" constant="21" id="jlN-qf-GsR"/>
+                            <constraint firstItem="BIN-0F-ymR" firstAttribute="centerX" secondItem="c02-hY-ta9" secondAttribute="centerX" id="u3U-Ge-dpS"/>
+                            <constraint firstItem="c02-hY-ta9" firstAttribute="top" secondItem="BIN-0F-ymR" secondAttribute="bottom" constant="81" id="uXp-wT-vZR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="BIN-0F-ymR" id="3pb-Cw-VeN"/>
+                        <outlet property="jesseLabel" destination="jUo-pW-skw" id="XhV-9j-0Ok"/>
+                        <outlet property="walterLabel" destination="c02-hY-ta9" id="5MG-FA-JmA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="26.53673163418291"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="breaking_bad.jpg" width="600" height="400"/>
+    </resources>
 </document>

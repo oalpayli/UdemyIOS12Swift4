@@ -10,11 +10,25 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var walterLabel: UILabel!
+    @IBOutlet weak var jesseLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
+        
     }
 
-
+    
+    
+    @IBAction func btnDegistirAction(_ sender: Any) {
+        
+        walterLabel.text = "Heisenberg"
+        
+    }
 }
 
